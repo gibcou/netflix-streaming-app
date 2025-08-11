@@ -63,6 +63,17 @@ function Banner() {
             150
           )}
         </h1>
+        <div className="banner__metadata">
+          <span className="banner__year">
+            {movie?.release_date ? new Date(movie.release_date).getFullYear() : 
+             movie?.first_air_date ? new Date(movie.first_air_date).getFullYear() : ''}
+          </span>
+          {movie?.vote_average && (
+            <span className="banner__rating">
+              ⭐ {movie.vote_average.toFixed(1)}
+            </span>
+          )}
+        </div>
       </div>
 
       <div className="banner--fadeBottom" />
