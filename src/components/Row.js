@@ -126,6 +126,9 @@ function Row({ title, fetchUrl, isLargeRow = false, onAddToMyList, onRemoveFromM
                   e.target.style.display = 'none';
                 }}
               />
+              <div className="row__posterTitle">
+                {movie.title || movie.name}
+              </div>
               {onAddToMyList && onRemoveFromMyList && isInMyList && (
                 <div className="row__posterOverlay">
                   <button
