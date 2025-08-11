@@ -39,7 +39,7 @@ function LoginScreen({ onAuth }) {
       <div className="loginScreen__background">
         <img
           className="loginScreen__logo"
-          src="/netflix-logo.svg"
+          src={`${process.env.PUBLIC_URL}/netflix-logo.svg`}
           alt="Netflix Logo"
         />
         <button 

@@ -52,7 +52,7 @@ function Nav({ onSearch, onMyListClick, onHomeClick }) {
         <img
           onClick={() => onHomeClick ? onHomeClick() : navigate("/")}
           className="nav__logo"
-          src="/netflix-logo.svg"
+          src={`${process.env.PUBLIC_URL}/netflix-logo.svg`}
           alt="Netflix Logo"
         />
 
@@ -88,7 +88,7 @@ function Nav({ onSearch, onMyListClick, onHomeClick }) {
         <img
           onClick={() => navigate("/profile")}
           className="nav__avatar"
-          src="/netflix-avatar.svg"
+          src={`${process.env.PUBLIC_URL}/netflix-avatar.svg`}
           alt="User Avatar"
         />
       </div>
