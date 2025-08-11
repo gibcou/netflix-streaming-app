@@ -221,6 +221,51 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .loginScreen__logo {
+    width: 120px;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  
+  .loginScreen__button {
+    right: 15px;
+    top: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .loginScreen__body > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .loginScreen__body > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .loginScreen__body > h3 {
+    font-size: 1.1rem;
+  }
+  
+  .loginScreen__input > form {
+    width: 80%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .loginScreen__input > form > input {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+  }
+  
+  .loginScreen__getStarted {
+    padding: 12px 16px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
   .carousel__container {
     padding: 0 20px;
   }
@@ -244,5 +289,88 @@
   .carousel__button {
     font-size: 1.5rem;
     padding: 15px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginScreen__logo {
+    width: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .loginScreen__button {
+    right: 10px;
+    top: 10px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .loginScreen__body {
+    padding: 15px;
+    width: 95%;
+  }
+  
+  .loginScreen__body > h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .loginScreen__body > h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .loginScreen__body > h3 {
+    font-size: 1rem;
+  }
+  
+  .loginScreen__input > form {
+    width: 95%;
+  }
+  
+  .loginScreen__input > form > input {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .loginScreen__getStarted {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .loginScreen__carousel {
+    margin-top: 40px;
+  }
+  
+  .loginScreen__carousel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .carousel__container {
+    padding: 0 10px;
+  }
+  
+  .carousel__track {
+    max-width: 400px;
+  }
+  
+  .carousel__slides {
+    width: 800%; /* 20 movies * 40% each for small mobile */
+  }
+  
+  .carousel__slide {
+    flex: 0 0 40%; /* Show 2.5 movies at a time on small mobile */
+    padding: 0 5px;
+  }
+  
+  .carousel__poster {
+    height: 200px;
+  }
+  
+  .carousel__button {
+    font-size: 1.2rem;
+    padding: 10px 8px;
   }
 }

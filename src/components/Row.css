@@ -23,7 +23,8 @@
 .row__posterContainer {
   position: relative;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 15px;
+  min-width: 150px;
 }
 
 .row__posterContainer:hover .row__posterOverlay {
@@ -32,11 +33,12 @@
 
 .row__poster {
   object-fit: contain;
-  width: 100%;
-  max-height: 100px;
+  width: 150px;
+  max-height: 200px;
   margin-right: 10px;
   transition: transform 450ms;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .row__poster:hover {
@@ -45,12 +47,74 @@
 }
 
 .row__posterLarge {
-  max-height: 250px;
+  width: 200px;
+  max-height: 300px;
 }
 
 .row__posterLarge:hover {
   transform: scale(1.09);
   opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .row {
+    margin-left: 10px;
+  }
+  
+  .row > h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  
+  .row__posters {
+    padding: 15px 10px;
+  }
+  
+  .row__posterContainer {
+    margin-right: 12px;
+    min-width: 120px;
+  }
+  
+  .row__poster {
+    width: 120px;
+    max-height: 180px;
+  }
+  
+  .row__posterLarge {
+    width: 160px;
+    max-height: 240px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .row {
+    margin-left: 5px;
+  }
+  
+  .row > h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .row__posters {
+    padding: 10px 5px;
+  }
+  
+  .row__posterContainer {
+    margin-right: 10px;
+    min-width: 100px;
+  }
+  
+  .row__poster {
+    width: 100px;
+    max-height: 150px;
+  }
+  
+  .row__posterLarge {
+    width: 130px;
+    max-height: 195px;
+  }
 }
 
 .row__posterOverlay {

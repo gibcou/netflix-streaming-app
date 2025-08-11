@@ -111,3 +111,76 @@
   width: 30px;
   height: 30px;
 }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 15px;
+    height: 25px;
+  }
+  
+  .nav__logo {
+    width: 70px;
+  }
+  
+  .nav__center {
+    gap: 15px;
+  }
+  
+  .nav__links {
+    gap: 15px;
+  }
+  
+  .nav__links span {
+    font-size: 13px;
+  }
+  
+  .nav__searchInput {
+    width: 180px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  .nav__avatar {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    padding: 10px;
+    height: 20px;
+  }
+  
+  .nav__logo {
+    width: 60px;
+  }
+  
+  .nav__center {
+    gap: 10px;
+  }
+  
+  .nav__links {
+    gap: 10px;
+  }
+  
+  .nav__links span {
+    font-size: 12px;
+  }
+  
+  .nav__searchInput {
+    width: 120px;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  
+  .nav__searchIcon {
+    font-size: 16px;
+  }
+  
+  .nav__avatar {
+    width: 25px;
+    height: 25px;
+  }
+}
