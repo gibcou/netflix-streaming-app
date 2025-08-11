@@ -1,0 +1,600 @@
+/* Full Movie Player Styles */
+.detailScreen__fullMoviePlayer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.detailScreen__movieScreen {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(229, 9, 20, 0.1) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.detailScreen__movieContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 40px;
+  animation: movieFadeIn 2s ease-in-out;
+}
+
+@keyframes movieFadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.detailScreen__movieLogo {
+  margin-bottom: 40px;
+}
+
+.detailScreen__movieLogo h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.detailScreen__movieControls {
+  margin: 40px 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.detailScreen__progressBar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.detailScreen__progress {
+  height: 100%;
+  background: linear-gradient(90deg, #e50914 0%, #ff6b6b 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  animation: progressPulse 2s infinite;
+}
+
+@keyframes progressPulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(229, 9, 20, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(229, 9, 20, 0.8); }
+}
+
+.detailScreen__controlButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detailScreen__controlBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.detailScreen__controlBtn:hover {
+  background: rgba(229, 9, 20, 0.8);
+  border-color: rgba(229, 9, 20, 1);
+  transform: scale(1.1);
+}
+
+.detailScreen__timeDisplay {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.detailScreen__movieMessage {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.detailScreen__movieMessage h2 {
+  color: #e50914;
+  font-size: 2.5rem;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.detailScreen__movieMessage p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.detailScreen__movieFeatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.detailScreen__movieFeatures span {
+  background: rgba(229, 9, 20, 0.2);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  transition: all 0.3s ease;
+}
+
+.detailScreen__movieFeatures span:hover {
+  background: rgba(229, 9, 20, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for full movie player */
+@media (max-width: 768px) {
+  .detailScreen__movieContent {
+    padding: 20px;
+  }
+  
+  .detailScreen__movieLogo h1 {
+    font-size: 2.5rem;
+  }
+  
+  .detailScreen__movieMessage h2 {
+    font-size: 2rem;
+  }
+  
+  .detailScreen__movieMessage p {
+    font-size: 16px;
+  }
+  
+  .detailScreen__controlButtons {
+    gap: 15px;
+  }
+  
+  .detailScreen__movieFeatures {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailScreen__movieLogo h1 {
+    font-size: 2rem;
+  }
+  
+  .detailScreen__movieMessage h2 {
+    font-size: 1.5rem;
+  }
+  
+  .detailScreen__controlBtn {
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+}
+
+.detailScreen {
+  background-color: #141414;
+  color: white;
+  min-height: 100vh;
+}
+
+.detailScreen__loading,
+.detailScreen__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Video Player Modal */
+.detailScreen__playerModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.detailScreen__playerContainer {
+  width: 90%;
+  max-width: 1200px;
+  height: 80%;
+  position: relative;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.detailScreen__closePlayer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.detailScreen__closePlayer:hover {
+  background: rgba(229, 9, 20, 0.8);
+}
+
+.detailScreen__videoWrapper {
+  width: 100%;
+  height: calc(100% - 80px);
+  position: relative;
+}
+
+.detailScreen__videoWrapper iframe {
+  border: none;
+  border-radius: 8px 8px 0 0;
+}
+
+.detailScreen__playerInfo {
+  padding: 20px;
+  background: linear-gradient(135deg, #141414 0%, #000000 100%);
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detailScreen__playerInfo h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.detailScreen__playerInfo p {
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.detailScreen__hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.detailScreen__heroContent {
+  padding: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detailScreen__backButton {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.detailScreen__backButton:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.detailScreen__info {
+  max-width: 600px;
+}
+
+.detailScreen__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.detailScreen__meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.detailScreen__year,
+.detailScreen__runtime,
+.detailScreen__rating {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.detailScreen__overview {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.detailScreen__genres {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.detailScreen__genre {
+  background: rgba(229, 9, 20, 0.8);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.detailScreen__buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.detailScreen__playButton,
+.detailScreen__trailerButton,
+.detailScreen__listButton {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detailScreen__playButton {
+  background: #fff;
+  color: #000;
+}
+
+.detailScreen__playButton:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.detailScreen__trailerButton {
+  background: rgba(229, 9, 20, 0.8);
+  color: white;
+  border: 2px solid rgba(229, 9, 20, 0.8);
+}
+
+.detailScreen__trailerButton:hover {
+  background: rgba(229, 9, 20, 1);
+  border-color: rgba(229, 9, 20, 1);
+  transform: scale(1.05);
+}
+
+.detailScreen__listButton {
+  background: rgba(109, 109, 110, 0.7);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.detailScreen__listButton:hover {
+  background: rgba(109, 109, 110, 0.9);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.detailScreen__listButton.inList {
+  background: rgba(34, 139, 34, 0.8);
+  border-color: rgba(34, 139, 34, 1);
+  color: white;
+}
+
+.detailScreen__listButton.inList:hover {
+  background: rgba(34, 139, 34, 1);
+  border-color: rgba(34, 139, 34, 1);
+  transform: scale(1.05);
+}
+
+.detailScreen__details {
+  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detailScreen__section {
+  margin-bottom: 50px;
+}
+
+.detailScreen__section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.detailScreen__cast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.detailScreen__castMember {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.detailScreen__castMember:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detailScreen__castImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.detailScreen__castInfo {
+  flex: 1;
+}
+
+.detailScreen__castName {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.detailScreen__castCharacter {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.detailScreen__additionalInfo {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.detailScreen__additionalInfo p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.detailScreen__additionalInfo strong {
+  color: #e50914;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .detailScreen__playerContainer {
+    width: 95%;
+    height: 70%;
+  }
+  
+  .detailScreen__heroContent {
+    padding: 30px 20px;
+  }
+  
+  .detailScreen__title {
+    font-size: 2.5rem;
+  }
+  
+  .detailScreen__meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .detailScreen__buttons {
+    flex-direction: column;
+  }
+  
+  .detailScreen__playButton,
+  .detailScreen__trailerButton,
+  .detailScreen__listButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .detailScreen__details {
+    padding: 30px 20px;
+  }
+  
+  .detailScreen__cast {
+    grid-template-columns: 1fr;
+  }
+  
+  .detailScreen__castMember {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .detailScreen__castImage {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailScreen__playerContainer {
+    width: 98%;
+    height: 60%;
+  }
+  
+  .detailScreen__title {
+    font-size: 2rem;
+  }
+  
+  .detailScreen__overview {
+    font-size: 16px;
+  }
+  
+  .detailScreen__hero {
+    height: 60vh;
+  }
+  
+  .detailScreen__closePlayer {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}

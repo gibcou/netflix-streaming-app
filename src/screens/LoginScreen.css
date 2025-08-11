@@ -1,0 +1,248 @@
+.loginScreen {
+  position: relative;
+  height: 100vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/453ba2a1-6138-4e3c-9a06-b66f9a2832e4/US-en-20240415-popsignuptwoweeks-perspective_alpha_website_large.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.loginScreen__background {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.loginScreen__logo {
+  position: fixed;
+  left: 0;
+  width: 150px;
+  object-fit: contain;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.loginScreen__button {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginScreen__gradient {
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.loginScreen__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.loginScreen__body > h1 {
+  font-size: 3.125rem;
+  margin-bottom: 20px;
+}
+
+.loginScreen__body > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.loginScreen__body > h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.loginScreen__input {
+  margin: 20px;
+}
+
+.loginScreen__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+
+.loginScreen__getStarted {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loginScreen__input > form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.loginScreen__input > form > input {
+  outline-width: 0;
+  height: 40px;
+  border: none;
+  flex: 1;
+  padding: 0 15px;
+}
+
+/* Movie Carousel Styles */
+.loginScreen__carousel {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loginScreen__carousel h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel__container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.carousel__track {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  order: 2;
+  flex: 1;
+  max-width: 800px;
+}
+
+.carousel__slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 400%; /* 20 movies * 20% each */
+}
+
+.carousel__slide {
+  flex: 0 0 20%; /* Show 5 movies at a time */
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.carousel__poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel__poster:hover {
+  transform: scale(1.05);
+}
+
+.carousel__info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.carousel__info h4 {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.carousel__button {
+  position: relative;
+  top: auto;
+  transform: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 20px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel__button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel__button--left {
+  order: 1;
+}
+
+.carousel__button--right {
+  order: 3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel__container {
+    padding: 0 20px;
+  }
+  
+  .carousel__track {
+    max-width: 600px;
+  }
+  
+  .carousel__slides {
+    width: 600%; /* 20 movies * 30% each for mobile */
+  }
+  
+  .carousel__slide {
+    flex: 0 0 30%; /* Show 3 movies at a time on mobile */
+  }
+  
+  .carousel__poster {
+    height: 250px;
+  }
+  
+  .carousel__button {
+    font-size: 1.5rem;
+    padding: 15px 10px;
+  }
+}

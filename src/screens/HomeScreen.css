@@ -1,0 +1,215 @@
+.homeScreen {
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+}
+
+.homeScreen__categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.homeScreen__categories button {
+  background: transparent;
+  color: #999;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.homeScreen__categories button:hover {
+  color: white;
+  border-color: #666;
+}
+
+.homeScreen__categories button.active {
+  background-color: #e50914;
+  color: white;
+  border-color: #e50914;
+}
+
+/* Search Results Styles */
+.searchResults {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.searchResults h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.searchResults__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.searchResults__item {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.searchResults__item:hover {
+  transform: scale(1.05);
+}
+
+.searchResults__poster,
+.myList__poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.searchResults__poster:hover,
+.myList__poster:hover {
+  transform: scale(1.05);
+}
+
+.searchResults__info {
+  padding: 15px;
+}
+
+.searchResults__info h3 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.searchResults__info p {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* My List Styles */
+.myListSection {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.myListSection h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.emptyList {
+  color: #999;
+  font-size: 16px;
+  text-align: center;
+  padding: 40px;
+}
+
+.myList__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.myList__item {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.myList__item:hover {
+  transform: scale(1.05);
+}
+
+.myList__info {
+  padding: 15px;
+}
+
+.myList__info h3 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.myList__info p {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Button Styles */
+.myListBtn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.myListBtn:hover {
+  background: #f40612;
+}
+
+.myListBtn.inList {
+  background: #46d369;
+}
+
+.myListBtn.inList:hover {
+  background: #37a855;
+}
+
+.removeBtn {
+  background: #666;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+  background: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .searchResults__grid,
+  .myList__grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .homeScreen__categories {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .homeScreen__categories button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
